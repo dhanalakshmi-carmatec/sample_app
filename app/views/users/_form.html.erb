@@ -1,0 +1,24 @@
+<%= form_for(@user) do |f| %>
+
+  <div class="field">
+    <%= f.label :email %>
+    <%= f.text_field :email %>
+  </div>
+
+   <div class="field">
+    <%= f.label :password %>
+    <%= f.text_field :password %>
+  </div>
+
+  <div class="field">
+    <%= f.label :active %>
+    <%#= f.text_area :active %>
+    <span class="form-feild">
+      <%= f.select :active, options_for_select(['Yes', 'No'], user.active), {}, class: 'selectpicker select-controller' %>
+    </span>
+  </div>
+
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
