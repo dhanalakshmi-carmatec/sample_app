@@ -1,8 +1,8 @@
-<!-- <p id="notice"><%= notice %></p> -->
-
+<p id="notice"><%= notice %></p>
+<div class="container">
 <h1>Books</h1>
 
-<table>
+<table class="table table-bordered">
   <thead>
     <tr>
       <th>Name</th>
@@ -14,16 +14,13 @@
   <tbody>
     <% @books.each do |book| %>
       <tr>
-        <td><% book.name %></td>
+        <td><%= book.name %></td>
         <td><%= book.description %></td>
-        <td><%= link_to 'Add', new_category_book_path(@category, book) %></td>
+        <td><%= link_to 'New', new_category_book_path(@category, book) %></td>
         <td><%= link_to 'Edit', edit_category_book_path(@category, book) %></td>
         <td><%= link_to 'Destroy', category_book_path(@category, book), method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
     <% end %>
   </tbody>
 </table>
-
-<br>
-
-<%= link_to 'New Book', new_category_book_path %>
+</div>

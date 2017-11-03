@@ -1,5 +1,7 @@
 <p id="notice"><%= notice %></p>
 
+<div class="container">
+
 <!-- <p>
   <strong>Category_id:</strong>
   <%#= @book.category_id %>
@@ -7,13 +9,13 @@
 
 <p>
   <strong>Name:</strong>
-  <% @book.name %>
+  <%= @book.name %>
 </p>
 
 <p>
   <strong>Description:</strong>
   <%= @book.description %>
 </p>
-
-<%= link_to 'Edit', edit_category_book_path(@book) %> 
-<%= link_to 'Back', category_books_path %>
+</div>
+<%#= link_to 'Edit', edit_category_book_path(@book) %> 
+<%#= link_to 'Back', category_books_path %>

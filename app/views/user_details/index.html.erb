@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<div class="container">
+<h1>UserDetails</h1>
+
+<table class="table table-bordered">
+  <thead>
+    <tr>
+      <th>Category-Id</th>
+      <th>Book-Id</th>
+      <th>ReturnDate</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @user_details.each do |user| %>
+      <tr>
+        <td><%= user.category_id %></td>
+        <td><%=  user.book_id %></td> 
+        <td><%= user.return_date %></td>
+        <td><%= link_to 'New', new_user_detail_path(user) %></td>
+        <td><%= link_to 'Edit', edit_user_detail_path(user) %></td>
+        <td><%= link_to 'Destroy', user_detail_path(user), method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+</div>

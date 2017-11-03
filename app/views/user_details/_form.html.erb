@@ -1,0 +1,21 @@
+<%#= form_for(@user) do |f| %>
+
+  <div class="field">
+    <%= f.label :category_id %>
+    <%= f.text_field :category_id %>
+  </div>
+
+   <div class="field">
+    <%= f.label :book_id %>
+    <%= f.text_field :book_id %>
+  </div>
+
+  <div class="field">
+    <%= f.label :return_date %>
+    <%= f.date_select(:return_date,:start_year => 1990) %>
+  </div>
+
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<%# end %>
