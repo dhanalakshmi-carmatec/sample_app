@@ -1,29 +1,30 @@
 <p id="notice"><%= notice %></p>
 
-<div class="container">
-<h1>Users</h1>
-
-<table class="table table-bordered">
+<div class="container main-container">
+  <div class="main-container-top">
+  <div class="filter-icons">
+    <ul class="nav navbar-nav navbar-right">
+      <%= link_to 'New', new_admin_user_path %>
+    </ul>
+    </div>
+    <section class="title-header">
+      <h1>Users</h1>
+    </section>
+    
+  </div>
+  <hr class="border">
+  <div class="table-responsive scrollbar" id="table-scrollbar">
+  <table class="table table-bordered">
   <thead>
     <tr>
       <th>Email</th>
-      <!-- <th>Password</th> -->
       <th>Active</th>
-      <th colspan="3"></th>
+     <th class="actions">Actions</th>
     </tr>
   </thead>
-
-  <tbody>
-    <% @users.each do |user| %>
-      <tr>
-        <td><%= user.email %></td>
-       <!--  <td><%  user.password %></td> -->
-        <td><%= user.active %></td>
-        <td><%= link_to 'New', new_admin_user_path(user) %></td>
-        <td><%= link_to 'Edit', edit_admin_user_path(user) %></td>
-        <td><%= link_to 'Destroy', admin_user_path(user), method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
-    <% end %>
-  </tbody>
+  <body>
+   <%= render @users %>
+  </body>
 </table>
+</div>
 </div>

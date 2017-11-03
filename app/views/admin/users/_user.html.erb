@@ -1,0 +1,10 @@
+<tr>
+  <td><%= user.email %></td>
+  <td><%= user.active %></td>
+  <td class="actions">
+    <%= link_to 'Edit', edit_admin_user_path(user) %>
+    <%= link_to 'Delete', admin_user_path(user), method: :delete, data: { confirm: 'Are you sure?' } %> 
+    <%= link_to 'UserDetails', admin_user_user_details_path(user, @user_detail)%> 
+
+  </td>
+</tr>

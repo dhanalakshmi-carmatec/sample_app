@@ -1,11 +1,18 @@
-<%= form_for(@category) do |f| %>
 
-  <div class="field">
-    <%= f.label      :name %>
-    <%= f.text_field :name %>
+ <hr class="border">
+ <div class="mmt-credentials-form mmt-account-settings-form">
+ <%= form_for(@category) do |f| %>
+  <div class="col-lg-12 col-md-12">
+    <div class="form-group">
+      <%= f.label :name %>
+        <%= f.text_field :name %>
+    </div>
   </div>
 
-  <div class="actions">
+  <div class="col-lg-12 col-md-12">
+   <div class="col-md-8">
     <%= f.submit %>
+   </div>
   </div>
 <% end %>
+</div>

@@ -20,15 +20,14 @@
           <li><%= link_to "Home", root_path %></li>
           <li><%= link_to "Users", admin_users_path %></li>
           <li><%= link_to "Categories", categories_path %></li>
-          <li><%= link_to "UserDetails", user_details_path%></li>
        </ul>
        <ul class="nav navbar-nav navbar-right">
          <li><%= link_to 'Sign Up', new_user_registration_path %></li>
-      <% if user_signed_in? %>
-         <li><%= link_to('Logout', destroy_user_session_path, method: :delete) %></li>
-      <% else %>
+        <% if user_signed_in? %>
+         <li><%= link_to 'Logout',  destroy_user_session_path, method: :delete %></li>
+        <% else %>
          <li><%= link_to('Login', new_user_session_path) %></li>
-      <% end %>
+        <% end %>
        </ul>
      </div>
    </nav>

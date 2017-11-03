@@ -28,11 +28,13 @@ ActiveRecord::Schema.define(version: 20171102185021) do
   end
 
   create_table "user_details", force: :cascade do |t|
-    t.integer  "category_id"
+    t.integer  "user_id"
     t.integer  "book_id"
     t.date     "return_date"
     t.datetime "created_at",  null: false
     t.datetime "updated_at",  null: false
+    t.index ["book_id"], name: "index_user_details_on_book_id"
+    t.index ["user_id"], name: "index_user_details_on_user_id"
   end
 
   create_table "users", force: :cascade do |t|

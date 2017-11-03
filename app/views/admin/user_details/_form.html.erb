@@ -1,0 +1,36 @@
+
+<hr class="border">
+<div class="mmt-credentials-form mmt-account-settings-form">
+ <div class="col-lg-12 col-md-12">
+  <div class="form-group">
+    <%#= f.label :user_id %>
+     <%#= f.select :user_id %> 
+     <label for="user_id">User</label>
+        <%#= f.select :user_id, options_for_select(users.map {|p| [ p.user, p.id.to_i ]}, params[:user_id]), {prompt: 'Select User'}, class: "select-controller"%>
+        <%= f.user_detail.select(:user_id, User.all) %>
+  </div>
+ </div>
+
+  <div class="col-lg-12 col-md-12">
+    <div class="form-group">
+      <%= f.label :book_id %>
+        <%= f.text_field :book_id %>
+    </div>
+  </div>
+
+  <div class="col-lg-12 col-md-12">
+   <div class="form-group">
+    <%= f.label :return_date %>
+    <%= f.date_select(:return_date,:start_year => 1990) %>
+   </div>
+  </div>
+  
+  <div class="col-lg-12 col-md-12">
+   <div class="col-md-8">
+    <%= f.submit %>
+  </div>
+  </div>
+</div>
+
+
+

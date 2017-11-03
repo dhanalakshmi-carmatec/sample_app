@@ -4,25 +4,27 @@
   <div class="main-container-top">
   <div class="filter-icons">
     <ul class="nav navbar-nav navbar-right">
-      <%= link_to 'New', new_category_path %>
+      <%= link_to 'New', new_admin_user_user_detail_path %>
     </ul>
     </div>
     <section class="title-header">
-      <h1>Categories</h1>
+      <h1>UserDetails</h1>
     </section>
   </div>
+  <hr class="border">
+  <div class="table-responsive scrollbar" id="table-scrollbar">
 
-<hr class="border">
 <table class="table table-bordered">
   <thead>
     <tr>
-      <th>Name</th>
-      <th class="actions">Actions</th>
+      <th>User</th>
+      <th>Book</th>
+      <th>ReturnDate</th>
     </tr>
   </thead>
 
   <tbody>
-    <%= render @categories %>
+    <%= render @user_details %>
   </tbody>
 </table>
 </div>
