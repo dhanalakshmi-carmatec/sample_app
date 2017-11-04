@@ -1,8 +1,13 @@
 <div class="container">
-<p id="notice"><%= notice %></p>
-
   <h3>Uesr - Details</h3>
+  <p id="notice"><%= notice %></p>
   <%= link_to 'Edit', edit_admin_user_path(@user) %> 
+
+<p>
+  <strong>Name:</strong>
+  <%= @user.name %>
+</p>
+
 <p>
   <strong>Email:</strong>
   <%= @user.email %>

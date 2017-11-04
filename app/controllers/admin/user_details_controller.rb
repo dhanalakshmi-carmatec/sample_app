@@ -1,5 +1,6 @@
 class Admin::UserDetailsController < ApplicationController
   before_action :set_user
+  #before_action :set_book
   before_action :set_user_detail, only: [:show, :edit, :update, :destroy]
 
   def index
@@ -45,12 +46,16 @@ class Admin::UserDetailsController < ApplicationController
     def set_user
       @user = User.find(params[:user_id])
     end 
+    
+    # def set_book
+    #   @book = Book.find(params[:book_id])
+    # end 
 
     def set_user_detail
       @user_detail = UserDetail.find(params[:id])
     end
 
     def user_params
-      params.require(:user_detail).permit(:user_id, :return_date)
+      params.require(:user_detail).permit(:category, :book_id, :return_date)
     end
 end

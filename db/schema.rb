@@ -29,6 +29,7 @@ ActiveRecord::Schema.define(version: 20171102185021) do
 
   create_table "user_details", force: :cascade do |t|
     t.integer  "user_id"
+    t.string   "category"
     t.integer  "book_id"
     t.date     "return_date"
     t.datetime "created_at",  null: false
@@ -38,6 +39,7 @@ ActiveRecord::Schema.define(version: 20171102185021) do
   end
 
   create_table "users", force: :cascade do |t|
+    t.string   "name"
     t.string   "email",                  default: "",    null: false
     t.string   "encrypted_password",     default: "",    null: false
     t.boolean  "active"
