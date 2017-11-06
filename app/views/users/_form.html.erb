@@ -1,0 +1,42 @@
+<%= form_for @user do |f| %>
+
+<hr class="border">
+<div class="mmt-credentials-form mmt-account-settings-form">
+  <div class="col-lg-12 col-md-12">
+    <div class="form-group">
+      <%= f.label :name %>
+        <%= f.text_field :name %>
+    </div>
+  </div>
+
+  <div class="col-lg-12 col-md-12">
+    <div class="form-group">
+      <%= f.label :email %>
+        <%= f.text_field :email %>
+    </div>
+  </div>
+
+  <div class="col-lg-12 col-md-12">
+   <div class="form-group">
+    <%= f.label :password %>
+    <%= f.text_field :password %>
+   </div>
+  </div>
+
+  <div class="col-lg-12 col-md-12">
+   <div class="form-group">
+    <%= f.label :active %>
+    <span class="form-feild">
+      <%= f.select :active, options_for_select([['Yes', "true"], ['No', "false"]], @user.active), {}, class: 'selectpicker select-controller' %>
+    </span>
+   </div>
+  </div>
+  
+  <div class="col-lg-12 col-md-12">
+   <div class="col-md-8">
+    <%= f.submit %>
+  </div>
+  </div>
+</div>
+<%end%>
+

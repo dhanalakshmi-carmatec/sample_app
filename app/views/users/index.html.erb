@@ -1,0 +1,27 @@
+<div class="container main-container">
+  <div class="main-container-top">
+    <div class="filter-icons">
+      <ul class="nav navbar-nav navbar-right">
+        <%= link_to 'New', new_user_path %>
+      </ul>
+    </div>
+    <p id="notice"><%= notice %></p>
+     <h1>Users</h1>
+     <hr class="border">
+     <div class="table-structure">
+       <table class="table table-bordered">
+         <thead>
+           <tr>
+              <th>Name</th>
+              <th>Email</th>
+              <th>Active</th>
+              <th class="actions">Actions</th>
+           </tr>
+         </thead>
+         <body>
+            <%= render @users %>
+         </body>
+       </table>
+     </div>
+ </div>
+</div>

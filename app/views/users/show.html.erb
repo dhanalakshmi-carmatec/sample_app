@@ -1,0 +1,33 @@
+<div class="container main-container">
+  <div class="main-container-top">
+    <div class="filter-icons">
+      <ul class="nav navbar-nav navbar-right">
+        <%= link_to 'Edit', edit_user_path(@user) %> 
+      </ul>
+    </div>
+  </div>
+  <p id="notice"><%= notice %></p>
+  <h3>Uesr - Details</h3> 
+    <hr class="border">
+     
+<p>
+  <strong>Name:</strong>
+  <%= @user.name %>
+</p>
+
+<p>
+  <strong>Email:</strong>
+  <%= @user.email %>
+</p>
+
+<p>
+  <strong>Password:</strong>
+  <% @user.password %>
+</p>
+
+<p>
+  <strong>Active:</strong>
+  <%= @user.active %>
+</p>
+
+</div> 
