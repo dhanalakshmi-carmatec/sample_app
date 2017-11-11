@@ -4,6 +4,11 @@
     <%= f.label :return_date %>
     <%= f.date_select(:return_date,:start_year => 1990) %>
   </div>
+  
+  <div class="field">
+    <%= f.label :shipping_address%>
+    <%= f.text_field :shipping_address %>
+  </div>
 
   <div class="actions">
     <%= f.submit %>

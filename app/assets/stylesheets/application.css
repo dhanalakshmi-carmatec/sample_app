@@ -13,8 +13,6 @@
  *= require_self
  *= require social-share-button
  *= require easy-responsive-tabs
- *= require jquery.bxslider
- *= require bootstrap.min
  *= require_tree .
  */
 

@@ -1,0 +1,15 @@
+<div class="container">
+<p id="notice"><%= notice %></p>
+  <h3>UserBook - Show</h3>
+ <%= link_to 'Edit', edit_user_book_path(@user_book) %> 
+ 
+<p>
+  <strong>ReturnDate:</strong>
+  <%= @user_detail.return_date %>
+</p>
+
+<p>
+  <strong>ShippingAddress:</strong>
+  <%= @user_detail.shipping_address %>
+</p>
+</div>  

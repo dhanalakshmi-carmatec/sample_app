@@ -1,6 +1,8 @@
 <div class="container">
  <p id="notice"><%= notice %></p>
  <h2>New User</h2>
+ <hr class="border">
+ <%=@user.errors.full_messages.to_sentence %>
  <%= form_for @user, url: admin_users_path, method: :post do |f| %>
  
  <%= render 'form', f:f %>

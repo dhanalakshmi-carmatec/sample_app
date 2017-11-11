@@ -5,9 +5,21 @@ Rails.application.routes.draw do
   namespace :admin do
     resources :users do
       resources :user_details
-    end  
+    end 
+
+     resources :users do
+      resources :user_books
+    end 
   end
   
+  #  resources :users do
+  #     resources :user_details
+  # end  
+  
+  #  resources :users do
+  #     resources :user_books
+  # end
+
   resources :categories do 
    resources :books
   end

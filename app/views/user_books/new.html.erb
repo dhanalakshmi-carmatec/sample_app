@@ -1,0 +1,12 @@
+<p id="notice"><%= notice %></p>
+
+<div class="container">
+<h2>New UserBooks</h2>
+<hr class="border">
+<%=@user_book.errors.full_messages.to_sentence %>
+
+<%= form_for @user_book, url: user_user_books_path, method: :post  do |f| %>
+
+<%= render 'form', f:f %>
+<% end %>
+</div>

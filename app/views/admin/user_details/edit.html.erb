@@ -2,6 +2,7 @@
 
 <div class="container">
 <h2>Edit UserDetails</h2>
+<hr class="border">
 <%= form_for @user_detail, url: admin_user_user_detail_path(@user, @user_detail), method: :put  do |f| %>
 
 <%= render 'form', f:f %>

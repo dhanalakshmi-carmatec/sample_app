@@ -1,9 +1,9 @@
 <p id="notice"><%= notice %></p>
 
 <div class="container">
-<h2>Edit UserDetails</h2>
+<h2>Edit UserBook</h2>
 <hr class="border">
-<%= form_for @user_details, url: user_details_path, method: :patch  do |f| %>
+<%= form_for @user_books, url: edit_user_user_book_path, method: :patch  do |f| %>
 
 <%= render 'form', f:f %>
 <% end %>

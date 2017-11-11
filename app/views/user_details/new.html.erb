@@ -2,6 +2,8 @@
 
 <div class="container">
 <h2>New UserDetails</h2>
+<hr class="border">
+<%=@user_detail.errors.full_messages.to_sentence %>
 <%= form_for @user_detail, url: user_details_path, method: :post  do |f| %>
 
 <%= render 'form', f:f %>

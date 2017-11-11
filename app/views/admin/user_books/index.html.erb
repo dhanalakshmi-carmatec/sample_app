@@ -4,26 +4,25 @@
   <div class="main-container-top">
   <div class="filter-icons">
     <ul class="nav navbar-nav navbar-right">
-      <%= link_to 'New', new_admin_user_user_detail_path %>
+      <%= link_to 'New', new_admin_user_user_book_path %>
     </ul>
     </div>
     <section class="title-header">
-      <h1>UserDetails</h1>
+      <h1>UserBooks</h1>
     </section>
   </div>
   <hr class="border">
-  <div class="table-structure">
-
- <table class="table table-bordered">
+<table class="table table-bordered">
   <thead>
     <tr>
       <th>ReturnDate</th>
+      <th>ShippingAddress</th>
       <th class="actions">Actions</th>
     </tr>
   </thead>
 
-  <tbody>
-    <%= render @user_details %>
+  <tbody>   
+   <%= render @user_books %> 
   </tbody>
- </table>
+</table>
 </div>
